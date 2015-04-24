@@ -12,9 +12,13 @@
     "url": "git+https://github.com/ayushagarwal95/kuixine-hack.git"
   },
   "author": "Ayush Agarwal <agarwalayush161@gmail.com>",
-  "license": "GPL",
+  "license": "GPL 3.0",
   "bugs": {
     "url": "https://github.com/ayushagarwal95/kuixine-hack/issues"
   },
-  "homepage": "https://github.com/ayushagarwal95/kuixine-hack#readme"
+  "dependencies": {
+    "express": "4.12.3",
+    "jade": "^1.9.2",
+    "mongodb": "2.0.27"
+  }
 }

@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "express": "^4.12.3",
+    "express-mongo-db": "^1.0.0",
     "jade": "^1.9.2",
     "mongodb": "^2.0.27"
   }

@@ -1,0 +1,7 @@
+'use strict';
+
+var path = require('path');
+
+var app = require(path.join(__dirname, '..', 'app'))
+
+app.listen(process.env.PORT || 3000);

@@ -1,6 +1,7 @@
 'use strict';
 
 var express = require('express');
+var path = require('path');
 var router = express.Router();
 var mongoSearch = require(path.join(__dirname, '..', 'db', 'mongo-search'));
 
@@ -9,7 +10,7 @@ router.get('/', function (req, res) {
 });
 
 router.post('/search', function (req, res) {
-    var searchTerm = req.query.item;
+    var searchTerm = req.query.item;//todo - change
     var data = {
         db: req.db,
         search: searchTerm
@@ -22,10 +23,10 @@ router.post('/search', function (req, res) {
         }
         else {
             if (docs.length === 0) {
-                res.redirect('/results', {message: 'No results found'});
+                res.render('/results', {message: 'No results found'});
             }
             else {
-                res.redirect('/results', {response: docs, message: null});
+                res.render('/results', {response: docs, message: null});
             }
         }
     };

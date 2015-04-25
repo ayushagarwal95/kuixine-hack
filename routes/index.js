@@ -26,6 +26,7 @@ router.post('/search', function (req, res) {
                 res.render('results', {message: 'No results found'});
             }
             else {
+                docs = JSON.stringify(docs);
                 res.render('results', {response: docs, message: null});
             }
         }

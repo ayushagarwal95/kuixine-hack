@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 });
 
 router.post('/search', function (req, res) {
-    var searchTerm = req.query.item;//todo - change
+    var searchTerm = req.body.searchItem.toLowerCase();
     var data = {
         db: req.db,
         search: searchTerm

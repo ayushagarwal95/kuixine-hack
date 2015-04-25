@@ -17,6 +17,7 @@
     "url": "https://github.com/ayushagarwal95/kuixine-hack/issues"
   },
   "dependencies": {
+    "body-parser": "^1.12.3",
     "express": "^4.12.3",
     "express-mongo-db": "^1.0.0",
     "jade": "^1.9.2",

@@ -10,7 +10,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/search', function (req, res) {
-    console.log('I am here \n' + req.body);
     var searchTerm = req.body.searchItem.toLowerCase();
     var data = {
         db: req.db,
@@ -24,18 +23,14 @@ router.post('/search', function (req, res) {
         }
         else {
             if (docs.length === 0) {
-                res.render('/results', {message: 'No results found'});
+                res.render('results', {message: 'No results found'});
             }
             else {
-                res.render('/results', {response: docs, message: null});
+                res.render('results', {response: docs, message: null});
             }
         }
     };
     mongoSearch.getResults(data, onSearch);
-});
-
-router.get('/results', function (req, res) {
-    res.render('results');
 });
 
 module.exports = router;

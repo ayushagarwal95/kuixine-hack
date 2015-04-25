@@ -38,8 +38,10 @@ app.use(mongodb(require('mongodb'), mongodbOptions));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 

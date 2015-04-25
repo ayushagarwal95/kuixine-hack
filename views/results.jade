@@ -1,0 +1,13 @@
+extends layout
+
+block head
+   title 'Results | Kuixine'
+
+block content
+   if (message)
+      p= message
+   else
+      if (response.length == 0)
+         p= message
+      else
+         pre #{response}

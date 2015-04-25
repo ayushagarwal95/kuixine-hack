@@ -7,15 +7,12 @@ append head
             margin-top: 10%;
         }
 
-        .btn-lg {
-            margin-top: 3%;
-        }
-
 append content
     .container
         .row
-            .col-xs-12.col-sm-6.col-md-8
+            .col-xs-12
                 form(method='post', action='/search')
-                    label(for='searchBar', class='text-right pull-right') Search:
-                    input(id='searchBar',type='text', class='form-control', name='searchItem', placeholder='')
-                    input(type='submit', class='btn-lg', value='Search', id='button', name='search')
+                    .col-xs-10.col-sm-8
+                        input(id='searchBar',type='text', class='form-control', name='searchItem', placeholder='')
+                    .col-xs-2
+                        input(type='submit', class='btn btn-md btn-primary', value='Search', id='button', name='search')

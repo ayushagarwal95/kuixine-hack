@@ -1,13 +1,13 @@
 extends layout
 
 append head
-   title Results | Kuixine
+    title Results | Kuixine
 
 append content
-   if (message)
-      p= message
-   else
-      if (response.length == 0)
-         p= message
-      else
-         pre #{response}
+    if (message)
+        p= message
+    else
+        if (response.length == 0)
+            p= message
+        else
+            pre #{response}
